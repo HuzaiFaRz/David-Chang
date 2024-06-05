@@ -123,10 +123,19 @@ nav {
   min-width: 50%;
 }
 .headings {
+  position: relative;
   height: 9vw;
   overflow: hidden;
 }
+
+.headings > h1:nth-child(1) {
+  top: 0;
+}
+
 .headings > h1 {
+  position: absolute;
+  left: 0;
+  top: 100%;
   line-height: 0.9;
   font-size: 11vw;
   text-transform: uppercase;
@@ -178,5 +187,130 @@ nav {
   object-fit: cover;
 }
 
+@media (max-width: 1450px) {
+  .page-front {
+    pointer-events: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .page-content {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+  }
 
+  nav {
+    padding: 20px 0px;
+  }
 
+  .nav-left {
+    width: 50%;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  .nav-right {
+    width: 50%;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 0 30px;
+  }
+
+  .nav-logo {
+    height: 50px;
+  }
+
+  .nav-link {
+    pointer-events: all;
+    color: #ffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: gilroy-light;
+  }
+
+  .page-hero {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    width: 100%;
+  }
+  .hero-left {
+    min-width: 50%;
+  }
+  .headings {
+    position: relative;
+    height: 9vw;
+    overflow: hidden;
+  }
+
+  .headings > h1:nth-child(1) {
+    top: 0;
+  }
+
+  .headings > h1 {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    line-height: 0.9;
+    font-size: 11vw;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 100;
+    font-family: kajiro;
+  }
+  .explore-btn {
+    pointer-events: all;
+    padding: 0.8vw 5vw;
+    font-size: 3vw;
+    margin-top: 2vw;
+    font-family: kajiro;
+    letter-spacing: 1px;
+  }
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 25%;
+    color: #fff;
+  }
+
+  .hero-right > p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+  }
+  .hero-right > p:nth-child(3) {
+    margin-bottom: 60px;
+  }
+  .right-img {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 100%;
+    height: 200px;
+  }
+
+  .page-back {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .page-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
