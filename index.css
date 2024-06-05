@@ -79,6 +79,29 @@ nav {
   font-family: gilroy-light;
 }
 
+.page-hero {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  width: 100%;
+  height: 100px;
+  background: red;
+}
+.hero-left {
+  width: 50%;
+  height: 100%;
+  background: yellow;
+}
+.hero-right {
+  width: 25%;
+  height: 100%;
+  background: blue;
+}
 .page-back {
   width: 100%;
   height: 100vh;
