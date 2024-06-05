@@ -1,3 +1,23 @@
+@font-face {
+  font-family: gilroy-light;
+  src: url(Font/Gilroy-Light.ttf);
+}
+
+@font-face {
+  font-family: gilroy-medium;
+  src: url(Font/Gilroy-Medium.ttf);
+}
+
+@font-face {
+  font-family: gilroy-semi-bold;
+  src: url(Font/Gilroy-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: gilroy-bold;
+  src: url(Font/Gilroy-Bold.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,54 +36,59 @@ main {
   height: 100%;
 }
 
-
-.page-front{
-    width: 100%;
-    height: 100vh;
-    background: red;
+.page-front {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
 }
-
-.page-back{
-    width: 100%;
-    height: 100vh;
-    background: fuchsia;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+.page-content {
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+  background-color: #000;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 nav {
-  position: absolute;
   width: 100%;
-  height: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 40px 0;
   background-color: #000;
 }
-.nav-logo {
-  width: 100px;
+
+.nav-left,
+.nav-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
-.page {
-  width: 100%;
-  height: 100%;
+.nav-logo {
+  height: 50px;
 }
+
+.nav-link {
+  color: #ffff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: gilroy-light;
+}
+
+.page-back {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 .page-img {
   width: 100%;
   height: 100%;
