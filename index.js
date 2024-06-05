@@ -1,6 +1,3 @@
 var main = document.querySelector("main");
-main.addEventListener("mousemove", function () {
+main.addEventListener("mousemove", function () {});
 
-
-    
-});
