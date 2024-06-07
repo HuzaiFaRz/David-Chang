@@ -1,4 +1,11 @@
-if (window.matchMedia("(min-width:800px)").matches) {
+// if (window.matchMedia("(max-width:800px)").matches) {
+//   var shery = Shery.imageEffect(false, {
+//     style: false,
+//     debug: false,
+//     config: false,
+//     gooey: false,
+//   });
+// } else {
   var shery = Shery.imageEffect(".page-back", {
     style: 5,
 
@@ -36,14 +43,7 @@ if (window.matchMedia("(min-width:800px)").matches) {
 
     gooey: true,
   });
-} else {
-  var shery = Shery.imageEffect(false, {
-    style: false,
-    debug: false,
-    config: false,
-    gooey: false,
-  });
-}
+// }
 
 var main = document.querySelector("main");
 var headings = document.querySelectorAll(".headings");
