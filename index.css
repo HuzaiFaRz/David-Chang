@@ -54,6 +54,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow-y: hidden;
 }
 main {
   width: 100%;
@@ -124,7 +125,7 @@ nav {
 }
 .headings {
   position: relative;
-  height: 9vw;
+  height: 140px;
   overflow: hidden;
 }
 
@@ -137,7 +138,7 @@ nav {
   left: 0;
   top: 100%;
   line-height: 0.9;
-  font-size: 11vw;
+  font-size: 140px;
   text-transform: uppercase;
   color: white;
   font-weight: 100;
@@ -171,8 +172,7 @@ nav {
 .right-img {
   margin-top: 20px;
   margin-bottom: 30px;
-  max-width: 100%;
-  width: 100%;
+  width: 300px;
   height: 200px;
 }
 
@@ -188,21 +188,13 @@ nav {
 }
 
 @media (max-width: 1450px) {
-  .page-front {
-    pointer-events: none;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  html,
+  body {
+    overflow-y: auto;
   }
+
   .page-content {
-    position: relative;
-    margin: 0 auto;
     width: 100%;
-    height: 100vh;
   }
 
   nav {
@@ -223,73 +215,91 @@ nav {
   }
 
   .page-hero {
-    flex-wrap: wrap !important;
-    top: 20%;
-    transform: translate(0, 0);
-    background: red;
+    width: 100%;
+
     padding: 20px 20px;
   }
+
   .hero-left {
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+  .headings {
+    width: 100%;
+  }
+
+  .explore-btn {
+    font-size: 50px;
+  }
+  .hero-right {
+    display: none;
+  }
+}
+@media (max-width: 660px) {
+  nav {
+    padding: 20px 0px;
+  }
+
+  .nav-left {
+    width: 70%;
+    gap: 20px;
+  }
+  .nav-right {
+    width: 30%;
+    gap: 20px;
+  }
+
+  /* .page-hero {
+    top: 30%;
+  } */
+
+  /* .headings {
+    height: 100px;
+  } */
+
+  .explore-btn {
+    font-size: 40px;
+  }
+  .hero-right {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
   .headings {
     height: 130px;
   }
 
-  .headings > h1:nth-child(1) {
-    top: 0;
-  }
-
   .headings > h1 {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    line-height: 0.9;
-    font-size: 150px;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 100;
-    font-family: kajiro;
+    font-size: 130px;
   }
+}
+
+@media (max-width: 470px) {
+  nav {
+    padding: 10px 0px;
+  }
+  nav {
+    gap: 15px;
+  }
+  .nav-left {
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 0 0;
+  }
+  .nav-right {
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 0 0;
+  }
+
+
   .explore-btn {
-    pointer-events: all;
-    padding: 0.8vw 5vw;
-    font-size: 3vw;
-    margin-top: 2vw;
-    font-family: kajiro;
-    letter-spacing: 1px;
-  }
-  .hero-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    width: 50%;
-    color: #fff;
-  }
-
-  .hero-right > p {
-    font-size: 14px;
-    font-weight: 300;
-    text-align: right;
-  }
-  .hero-right > p:nth-child(3) {
-    margin-bottom: 60px;
-  }
-  .right-img {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    max-width: 50%;
-  }
-
-  .page-back {
-    width: 100%;
-    height: 100vh;
-  }
-
-  .page-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    font-size: 20px;
   }
 }
