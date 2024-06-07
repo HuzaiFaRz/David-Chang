@@ -216,7 +216,7 @@ nav {
 
   .page-hero {
     width: 100%;
-
+    top: 55%;
     padding: 20px 20px;
   }
 
@@ -297,9 +297,16 @@ nav {
     gap: 15px;
     padding: 0 0;
   }
+}
+@media (max-width: 350px) {
+  .headings {
+    height: 100px;
+  }
 
-
+  .headings > h1 {
+    font-size: 100px;
+  }
   .explore-btn {
-    font-size: 20px;
+    margin-top: 6vw;
   }
 }
