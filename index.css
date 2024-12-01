@@ -50,6 +50,9 @@
   font-family: gilroy-light;
   cursor: pointer;
 }
+body {
+  margin: 0;
+}
 html,
 body {
   width: 100%;
